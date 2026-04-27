@@ -4,11 +4,13 @@ public class GiroscopioController : MonoBehaviour
 {
 
     [SerializeField] private Transform cam;
+    [SerializeField] private float sensibility;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Input.gyro.enabled = true;
+        Input.gyro.updateInterval = 0.0167f;
     }
 
 
@@ -18,10 +20,7 @@ public class GiroscopioController : MonoBehaviour
         {
             Quaternion inputGyro = Input.gyro.attitude;
 
-            cam.rotation = new Quaternion(inputGyro.x, inputGyro.y, -inputGyro.z, -inputGyro.w);
-
             Quaternion correccionGiro = Quaternion.Euler(90, 0, 0);
-
             cam.rotation = correccionGiro * new Quaternion(inputGyro.x, inputGyro.y, -inputGyro.z, -inputGyro.w);
         }
     }
