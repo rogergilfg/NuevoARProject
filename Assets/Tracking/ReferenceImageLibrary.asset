@@ -28,22 +28,32 @@ MonoBehaviour:
     m_Name: fcb
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4989961914934646405
-      m_GuidHigh: 10042206382290638505
+      m_GuidLow: 5072798234299789584
+      m_GuidHigh: 569517955069462680
     m_SerializedTextureGuid:
-      m_GuidLow: 2901483926190747529
-      m_GuidHigh: 4217719886153517672
+      m_GuidLow: 13624639573730349778
+      m_GuidHigh: 17443696352815098762
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: frame
+    m_Name: rm
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5267133118334902342
-      m_GuidHigh: 421826175219498642
+      m_GuidLow: 5170883899039706735
+      m_GuidHigh: 4986199953359365562
     m_SerializedTextureGuid:
-      m_GuidLow: 11895296636314283838
-      m_GuidHigh: 15166824809767936425
+      m_GuidLow: 11836821117758454451
+      m_GuidHigh: 8976264327797984921
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: lugia
+    m_Name: nami
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4756232802967505663
+      m_GuidHigh: 4547444742579039148
+    m_SerializedTextureGuid:
+      m_GuidLow: 6468465049801400239
+      m_GuidHigh: 14881770628651026456
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: reiju
     m_Texture: {fileID: 0}

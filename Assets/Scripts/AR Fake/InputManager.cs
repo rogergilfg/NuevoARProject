@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
             Vector2 touchPosition = Input.touchCount > 0
                 ? Input.GetTouch(0).position
                 : (Vector2)Input.mousePosition;
+
             Ray ray = arCamera.ScreenPointToRay(touchPosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {

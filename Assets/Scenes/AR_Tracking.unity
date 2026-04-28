@@ -153,6 +153,12 @@ MonoBehaviour:
   objetosAR:
   - referenceImageName: fcb
     prefab: {fileID: 8678504257527512557, guid: 7c3d05a2c8461374caa9f72486fa1e79, type: 3}
+  - referenceImageName: rm
+    prefab: {fileID: 4589585004418498793, guid: 828c48b3390941f4285d23d01c7190aa, type: 3}
+  - referenceImageName: nami
+    prefab: {fileID: 1726219704359028074, guid: 674fe03050f25fa4db590a7540135a01, type: 3}
+  - referenceImageName: reiju
+    prefab: {fileID: 8536123593576185425, guid: 5227df7b81193964bbd62c92d26240ac, type: 3}
 --- !u!4 &545813062
 Transform:
   m_ObjectHideFlags: 0
