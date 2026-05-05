@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -29,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Vector3 spawnPosition;
-        spawnPosition = arCamera.transform.position + arCamera.transform.forward * distance + new Vector3(Random.Range(-spawnOffset, spawnOffset), Random.Range(-spawnOffset, spawnOffset), 0f);
+        spawnPosition = arCamera.transform.position + Quaternion.Euler(0f, Random.Range(0, 360), 0f) * arCamera.transform.forward * distance + new Vector3(Random.Range(-spawnOffset, spawnOffset), Random.Range(-spawnOffset, spawnOffset), 0f);
         Instantiate(enemy, spawnPosition, Quaternion.identity);
     }
 }

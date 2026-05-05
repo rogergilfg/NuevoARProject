@@ -296,8 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0248b3f2a5e578547bdbf5be7b901f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 3
-  destroyTime: 4
+  speed: 2.5
+  destroyTime: 6
   damage: 1
 --- !u!136 &5623237390776589088
 CapsuleCollider:

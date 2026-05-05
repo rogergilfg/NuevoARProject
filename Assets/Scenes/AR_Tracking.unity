@@ -521,7 +521,8 @@ MonoBehaviour:
   peleadores: []
   peleaEnCurso: 0
   segundaPeleaEnCurso: 0
-  tiempoEspera: 4
+  Pelea1: 4
+  Pelea2: 4
 --- !u!4 &866583589
 Transform:
   m_ObjectHideFlags: 0

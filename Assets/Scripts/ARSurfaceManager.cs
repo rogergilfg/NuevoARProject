@@ -1,15 +1,17 @@
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 public class ARSurfaceManager : MonoBehaviour
 {
 
     [SerializeField] private ARPlaneManager planeManager;
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject[] prefab;
     [SerializeField] private GameObject canvasUI;
 
+    private GameObject currentPrefab;
     private PlayerInput playerInput;
     private bool planeVisibility = true;
 
@@ -38,7 +40,7 @@ public class ARSurfaceManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Has tocado un " + hit.transform.name);
-                Instantiate(prefab, hit.point, Quaternion.identity);
+                Instantiate(currentPrefab, hit.point, Quaternion.identity);
             }
         }
     }
@@ -47,5 +49,11 @@ public class ARSurfaceManager : MonoBehaviour
     {
         canvasUI.SetActive(false);
         planeVisibility = !planeVisibility;
+    }
+
+    public void OnClick(int index)
+    {
+        Debug.Log("Prefab seleccionado: " + currentPrefab);
+        currentPrefab = prefab[index];
     }
 }
