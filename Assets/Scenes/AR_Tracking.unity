@@ -520,7 +520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleManager
   peleadores: []
   peleaEnCurso: 0
-  tiempoEspera: 3
+  segundaPeleaEnCurso: 0
+  tiempoEspera: 4
 --- !u!4 &866583589
 Transform:
   m_ObjectHideFlags: 0

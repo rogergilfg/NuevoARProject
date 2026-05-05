@@ -8,6 +8,7 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> peleadores;
     [SerializeField] private bool peleaEnCurso;
+    [SerializeField] private bool segundaPeleaEnCurso;
     [SerializeField] private float tiempoEspera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,27 +28,35 @@ public class BattleManager : MonoBehaviour
         Debug.Log("Fighter añadido: " + fighter.name);
         peleadores.Add(fighter);
 
-        if(peleadores.Count >= 2 )
+        if(peleadores.Count >= 2 && !peleaEnCurso)
         {
             peleaEnCurso = true;
-            StartCoroutine(StartBattle());
+            StartCoroutine(StartBattle(0, 1));
+        }
+        if (peleadores.Count == 4 && !segundaPeleaEnCurso)
+        {
+            segundaPeleaEnCurso = true;
+            StartCoroutine(StartBattle(2, 3));
         }
     }
 
-    IEnumerator StartBattle()
+    IEnumerator StartBattle(int indexA, int indexB)
     {
-        Debug.Log("Batalla iniciada!");
-
-        Debug.Log("Fighter 0: " + peleadores[0].transform.position);
-        Debug.Log("Fighter 1: " + peleadores[1].transform.position);
-
-        peleadores[0].transform.LookAt(peleadores[1].transform);
-        peleadores[1].transform.LookAt(peleadores[0].transform);
+        peleadores[indexA].transform.LookAt(peleadores[indexB].transform);
+        peleadores[indexB].transform.LookAt(peleadores[indexA].transform);
 
         yield return new WaitForSeconds(tiempoEspera);
 
         int perdedor = Random.Range(0, 2);
 
-        peleadores[perdedor].GetComponent<Animator>().SetTrigger("Die");
+        int ganador = 1 - perdedor;
+
+
+        Debug.Log("Animator perdedor: " + peleadores[perdedor].GetComponentInChildren<Animator>());
+
+        peleadores[ganador].GetComponentInChildren<Animator>().SetBool("Win", true);
+        peleadores[perdedor].GetComponentInChildren<Animator>().SetBool("Die", true);
+
+
     }
 }

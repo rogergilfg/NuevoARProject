@@ -2874,7 +2874,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2774676694909213309}
-  - component: {fileID: 8097908723300925447}
   m_Layer: 0
   m_Name: Luffy
   m_TagString: Untagged
@@ -2899,28 +2898,6 @@ Transform:
   - {fileID: 2375762637869167436}
   m_Father: {fileID: 9063790926247127542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8097908723300925447
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299574387085017287}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 05f325ea887aea547865fac9b2389078, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3111a1661a1724e4580584706468053f, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3336662134328401947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5052,6 +5029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9063790926247127542}
+  - component: {fileID: 8798845498683790945}
   m_Layer: 0
   m_Name: Luffy
   m_TagString: Untagged
@@ -5067,7 +5045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6273418969995550112}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.70710653}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.234, y: 0.514, z: -0.572}
   m_LocalScale: {x: 0.3685366, y: 0.3685366, z: 0.3685366}
   m_ConstrainProportionsScale: 0
@@ -5075,6 +5053,28 @@ Transform:
   - {fileID: 2774676694909213309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!95 &8798845498683790945
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273418969995550112}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 05f325ea887aea547865fac9b2389078, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3111a1661a1724e4580584706468053f, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6338263305636385899
 GameObject:
   m_ObjectHideFlags: 0
