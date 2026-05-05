@@ -14,4 +14,19 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("ARFake");
     }
+
+    public void ARTracking()
+    {
+        SceneManager.LoadScene("AR_Tracking");
+    }
+
+    public void TrackingSurface()
+    {
+        SceneManager.LoadScene("TrackingSurface");
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
