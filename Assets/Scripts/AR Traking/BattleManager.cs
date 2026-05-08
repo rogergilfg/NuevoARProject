@@ -14,6 +14,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private float Pelea1;
     [SerializeField] private float Pelea2;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip punch;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,18 +31,19 @@ public class BattleManager : MonoBehaviour
 
     public void AddFighter(GameObject fighter)
     {
-        Debug.Log("Fighter añadido: " + fighter.name);
         peleadores.Add(fighter);
 
         if(peleadores.Count >= 2 && !peleaEnCurso)
         {
             peleaEnCurso = true;
             StartCoroutine(StartBattle(0, 1, Pelea1));
+            AudioManager.instance.PlaySFX(punch, 0.2f, true, transform.position);
         }
         if (peleadores.Count == 4 && !segundaPeleaEnCurso)
         {
             segundaPeleaEnCurso = true;
             StartCoroutine(StartBattle(2, 3, Pelea2));
+            AudioManager.instance.PlaySFX(punch, 0.2f, true, transform.position);
         }
     }
 
@@ -63,10 +67,6 @@ public class BattleManager : MonoBehaviour
             perdedor = indexB;
             ganador = indexA;
         }
-
-            Debug.Log("Animator perdedor: " + peleadores[perdedor].GetComponentInChildren<Animator>());
-
-        Debug.Log("Perdedor: " + perdedor + " Ganador: " + ganador);
 
         peleadores[ganador].GetComponentInChildren<Animator>().SetBool("Win", true);
         peleadores[perdedor].GetComponentInChildren<Animator>().SetBool("Die", true);
