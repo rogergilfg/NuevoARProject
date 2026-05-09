@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -7,6 +8,7 @@ public class UIController : MonoBehaviour
     private int enemiesKilled;
     [SerializeField] private TextMeshProUGUI contador;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private GameObject gameOver;
 
     [SerializeField] private Image[] hearts;
 
@@ -43,5 +45,11 @@ public class UIController : MonoBehaviour
         {
             hearts[(int)(playerController.currentLife)].enabled = false;
         }
+    }
+
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

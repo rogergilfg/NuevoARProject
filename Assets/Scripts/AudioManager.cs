@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField] private GameObject prefabSFX;
+    [SerializeField] private GameObject prefabMusic;
 
     private AudioSource music;
     private float volumeLevel;
@@ -32,9 +33,10 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void PlayMusic(AudioClip _music)
+    public void PlayMusic(AudioClip _music, float _volumeLevel)
     {
         music.clip = _music;
+        music.volume = _volumeLevel;
         music.Play();
         music.loop = true;
     }

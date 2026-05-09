@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
         if(currentLife <= 0)
         {
-            //Menu de GameOver
+            uiController.GameOver();
         }
     }
 

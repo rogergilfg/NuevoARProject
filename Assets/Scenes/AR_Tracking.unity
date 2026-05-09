@@ -768,6 +768,7 @@ MonoBehaviour:
   Pelea1: 5
   Pelea2: 5
   punch: {fileID: 8300000, guid: 296143884bf5a264e9365f5c1cec9e49, type: 3}
+  victory: {fileID: 8300000, guid: d985d5d76e4ee574f961004bac9dafe8, type: 3}
 --- !u!4 &866583589
 Transform:
   m_ObjectHideFlags: 0
